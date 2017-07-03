@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var output='';
+        for(var i=0; i<=7;i++){
+            for(var j=0; j<i; j++){
+                output+='*';
+            }output+='\n';
+        }
+        alert(output);
+        
+        var output1='';
+        var s=1;
+        var a=7;
+        
+        for(var i=0; i<7;i++){
+            for(var j=0; j<a;j++){
+                output1+=' ';
+            }
+            for(var k=0; k<s;k++){
+                output1+='*';
+            }
+            output1+='\n';
+            s+=2;
+            a-=1;
+        }
+        
+        alert(output1);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
