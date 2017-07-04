@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*생성자*/
+        /*function stu(name,korean,math){
+            this.이름=name;
+            this.국어=korean;
+            this.수학=math;
+            
+            this.getSum = function(){
+                return this.국어+this.수학;
+            };
+            
+            this.getAverage=function(){
+                return this.getSum()/2;
+            };
+            
+            this.toString = function(){
+                return this.이름+'\t'+this.getSum()+'\t'+this.getAverage();
+            };
+        }
+        
+        var stus= new stu('ㅇㅅㅇ',96,98);
+        
+        var stus=[];
+        stus.push(new stu('ㅇㅅㅇ',96,98));
+        
+        var output='이름\t총점\t평균\n';
+        for(var i in stus){
+            output+=stus[i].toString()+'\n';
+        }
+        
+        alert(output);*/
+        
+        /*function stu(name,korean,math){
+            this.이름=name;
+            this.국어=korean;
+            this.수학=math;
+        }
+        stu.prototype.getSum()=function(){};
+        stu.prototype.getAverage()=function(){};
+        stu.prototype.toString()=function(){};*/
+        
+        /*캡슐화*/
+        function rec(width, height){
+            this.width = width;
+            this.height= height;
+        }
+        rec.prototype.getArea=function(){
+            return this.width*this.height;
+        };
+        var rectangle=new rec(5,7);
+        alert('area : '+rectangle.getArea());
+    </script>
+</body>
+</html>

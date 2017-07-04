@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*alert('a','b');
+        prompt('c');*/
+        
+        /*function sumAll(){
+            var output =0;
+            for(var i=0; i<arguments.length;i++){
+                output+=arguments[i];
+            }
+            return output;
+        }
+        
+        alert(sumAll(1,2,3,4,5,6,7,8,9));*/
+        
+        /*function returnFunction(){
+            alert('a');
+            return;
+            alert('b');
+        }
+        
+        var output = returnFunction();
+        alert(typeof(output)+' : '+output);*/
+        
+        /*function pythagoras(width, height){
+            return Math.sqrt(width*width+height*height);
+        }
+        
+        function square(x){
+            return x*x;
+        }
+        
+        alert(pythagoras(3,4));*/
+        
+        /*충돌*/
+        /*function square(width, height, hypoteruse){
+            if(width*width+height*height==hypoteruse*hypoteruse){
+               return true;
+            }else{
+                return false;
+            }
+        }*/
+        
+        /*내부충돌 해결*/
+        /*function pythagoras(width, height){
+            function square(x){
+            return x*x;
+            }
+            return Math.sqrt(square(width)+square(height));
+        }
+        
+        alert(pythagoras(5,4));*/
+        
+        /*function callTenTimes(callback){
+            for(var i =0; i<10;i++){
+                callback();
+            }
+        }
+        
+        var callback = function(){
+            alert('a');
+        }
+        
+        callTenTimes(callback);*/
+        
+        /*함수를 리턴*/
+        /*function returnFunction(){
+            return function(){
+                alert('a');
+            };
+        }
+        
+        returnFunction()();*/
+        
+        /*클로저*/
+        /*function test(name){
+            var output ='a'+name+'!';
+        }
+        
+        alert(output);*/
+        
+        /*function test(name){
+            var output ='a'+name+'!';
+            return function(){
+                alert(output);
+            };
+        }
+        
+        test('b')();*/
+        
+        /*function test(name){
+            var output ='a'+name+'!';
+            return function(){
+                alert(output);
+            };
+        }
+        
+        var test1 =test('w');
+        var test2 =test('2');
+        test1();
+        test2();*/
+        
+        /*타이머 함수*/
+        /*var intervalID = setInterval(function (){
+            alert('<p>'+new Date() +'<p>');
+        },1000);
+        
+        setTimeout(function (){
+            clearInterval(intervalID);
+        },10000);*/
+        
+        /*eval()*/
+        /*var willEval='';
+        willEval+='var num =10;';
+        willEval+='alert(num)';
+        
+        eval(willEval);*/
+        
+        /*isFinite()*/
+        /*var num = 1/0;
+        alert(num+' : '+isFinite(num));*/
+        
+        /*isNaN() / NaN 비교시*/
+        /*if(NaN==NaN){
+            alert('NaN==NaN');
+        }else{
+            alert('NaN!=NaN');
+        }*/
+        
+        /*숫자변환 paseInt*/
+        var won='100원';
+        var dollar='1.5$';
+        alert((Number(won))+ ' : '+Number(dollar));/*오류*/
+        alert(parseInt(won)+' : '+parseInt(dollar));
+        alert(parseFloat(won)+' : '+parseFloat(dollar));
+        
+    </script>
+</body>
+</html>
