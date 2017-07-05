@@ -47,7 +47,7 @@
         stu.prototype.toString()=function(){};*/
         
         /*캡슐화*/
-        function rec(width, height){
+        /*function rec(width, height){
             this.width = width;
             this.height= height;
         }
@@ -56,6 +56,76 @@
         };
         var rectangle=new rec(5,7);
         alert('area : '+rectangle.getArea());
+        
+        var rectangle = new rec(5,7);
+        rectangle.width = -2;
+        
+        alert(rectangle.getArea());*/
+        
+        /*function rec(w,h){
+            var width=w;
+            var height=h;
+            
+            this.getWidth = function(){return width;}
+            this.getHeight = function(){return height;}
+            this.setWidth = function(w){
+                width=w;
+            };
+            this.setHeight = function(h){
+                height=h;
+            };
+        }*/
+        
+        /*상속*/
+        /*function squ(length){
+            this.width=length;
+            this.height=length;
+        }
+        
+        squ.prototype.getArea=function(){
+            return this.getWidth()*this.getHeight();
+        };*/
+        
+        /*function rec{
+            var width = w;
+            var height = h;
+        }
+        
+        this.getWidth = function(){return width;}
+            this.getHeight = function(){return height;}
+            this.setWidth = function(w){
+                if(w<0){
+                    throw '-';
+                }else{
+                    width=w;
+                }
+            };
+            this.setHeight = function(h){
+                if(h<0){
+                    throw '-';
+                }else{
+                    height=h;
+                }
+            };
+        
+        squ.prototype.getArea=function(){
+            return this.getWidth()*this.getHeight();
+        };
+        
+        function squ(length){
+            this.base=rec;
+            this.base(length,length);
+        }
+        
+        squ.prototype = rec.prototype;
+        squ.prototype.constructor=squ;
+        
+        var rectangle = new rec(5,7);
+        var square = new squ(5);
+        alert(rectangle.getArea() + ' : '+ square.getArea());
+        };*/
+        
+        
     </script>
 </body>
 </html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*기본자료형*/
+        /*var pri = 279;
+        var obj = new Number(273);
+        
+        var output="";
+        output+=typeof(pri)+' : '+pri+'\n';
+        output+=typeof(obj)+' : '+pri+'\n';
+        alert(output);*/
+        
+        /*var pri = 279;
+        
+        pri.method=function(){
+            return 'pri'
+        };
+        
+        var output=pri.method()+'\n';
+        alert(output);*/
+        
+        /*var pri = 279;
+        var obj = new Number(273);
+        
+        Number.prototype.method= function(){
+            return 'pri';
+        };
+        
+        var output="";
+        output+=pri.method()+'\n';
+        output+=obj.method();
+        alert(output);*/
+        
+        /*object 속성*/
+        //hasOwnProperty, propertyIsEnumerable
+        /*var obj={property:279};
+        
+        var output='';
+        output+="HOP('property'): "+ obj.hasOwnProperty('property')+'\n';
+        output+="HOP('constructor'): "+ obj.hasOwnProperty('constructor')+'\n';
+        output+="PIE('constructor'): "+ obj.propertyIsEnumerable('property')+'\n';
+        output+="PIE('constructor'): "+ obj.propertyIsEnumerable('constructor')+'\n';
+        alert(output);
+        
+        for(var key in obj){
+            alert(obj[key]);
+        }*/
+        
+        //toString
+        /*var obj=new Object();
+        
+        alert(obj);
+        alert(obj.toString());*/
+        
+        //toString 재선언
+        /*var stu={
+            name:'ㅇ',
+            grade:'대1',
+            toString: function(){
+            return this.name+' : '+this.grade;
+            }
+        };
+        
+        alert(stu);*/
+        
+        /*자료형 구분*/
+        /*var numL=123;
+        var numO=new Number(123);
+        
+        var output='';
+        output+='1. '+typeof(numL)+'\n';
+        output+='2. '+typeof(numO)+'\n';
+        alert(output);*/
+        
+        /*var numL=123;
+        var numO=new Number(123);
+        
+        if(typeof(numL)=='number'){
+            alert('numL is number');
+        }
+        if((numO)=='number'){
+            alert('numO is number');         
+        }*/
+        
+        /*var numL=123;
+        var numO=new Number(123);
+        
+        if(numL.constructor==Number){
+            alert('numL is number');
+        }
+        if(numO.constructor==Number){
+            alert('numO is number');         
+        }*/
+        
+        //object 객체
+        /*Object.prototype.test = function(){
+            alert(this);
+        };
+        
+        var number = 279;
+        number.test();*/
+        
+        //object 객체 메서드
+        /*var num = 273.02134;
+        
+        var output='';
+        output+=num.toFixed(1)+'\n';
+        output+=num.toFixed(4);
+        alert(output);*/
+        
+        //MAX_VALUE
+        /*var num = Number.MAX_VALUE+1;
+        alert(num);*/
+        
+        /*String 객체*/
+        /*var strL='hello';
+        var strC=new String('hello');
+        
+        var output='';
+        output+=typeof(strL)+'\n';
+        output+=typeof(strC);
+        alert(output);*/
+        
+        //String length
+        /*var cha = prompt('input','pw');
+        
+        if(cha.length<6){
+           alert('over 6');
+           }else{
+               alert('ok');
+        }*/
+        
+        /*var str='abcdef';
+        
+        str=string.toUpperCase();
+        alert(str);*/
+        
+        /*var array=['A','B','C'];
+        
+        var output='';
+        for(var i=0; i<array.length;i++){
+            output+=i+' : '+array[i]+'\n';
+        }
+        alert(output);*/
+        
+        /*var array=[52,273,103,32];
+        array.sort(function (left, right){
+                   return left-right;
+        });
+        
+        alert(array);*/
+        
+        //Date 메서드
+        /*var now = new Date();
+        var before = new Date('December 9, 1991');
+        
+        var interval= now.getTime()-before.getTime();
+        interval = Math.floor(interval/(1000*60*60*24));
+        
+        alert(interval);*/
+    </script>
+</body>
+</html>

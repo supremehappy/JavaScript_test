@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <style>
+        .ex_show{
+            float: left; margin-right: 20px; cursor: pointer;
+        }
+        
+        .ex_hide{
+            float: left;
+            cursor: pointer;
+        }
+        
+        .ex_box{
+            clear: both;
+            float: left;
+            width: 100px; height: 50px;
+            background-color: yellow;
+            border: 1px solid skyblue;
+            margin: 50px; border-radius: 10px;
+        }
+        
+        
+    </style>
+    
+    <script>
+        $(function(){
+           var ex_show=$('.ex_show');
+            var ex_hide=$('.ex_hide');
+            var ex_box=$('.ex_box');
+            
+            ex_show.click(function(){
+                ex_box.fadeIn(3000);
+            });
+            
+            ex_hide.click(function(){
+                ex_box.fadeOut(5000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <b class="ex_show">show</b>
+    <b class="ex_hide">hide</b>
+    <div class="ex_box">
+        
+    </div>
+</body>
+</html>
