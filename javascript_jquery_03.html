@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        //attr
+        /*$(document).ready(function () {
+            // 변수를 선언합니다.
+            var src = $('img').attr('src');
+
+            // 출력합니다.
+            alert(src);
+        });*/
+        
+        /*$(document).ready(function () {
+            $('img').attr('width', 200);
+        });*/
+        
+        /*$(document).ready(function () {
+            $('img').attr('width', function(index){
+                return (index+1)*100;
+            });
+        });*/
+        
+        /*$(document).ready(function () {
+            $('img').attr({width: function(index){
+                return (index+1)*100;
+            }, height:100
+            });
+        });*/
+        
+        //remove
+        /*$(document).ready(function () {
+            $('h1').removeAttr('data-index');
+        });*/
+        
+        /*$(document).ready(function () {
+            var color=$('h1').css('color');
+            
+            alert(color);
+        });*/
+        
+        /*$(document).ready(function () {
+            var color=['red','white','blue'];
+            
+            $('h1').css('color',function(index){
+                return color[index];
+            });
+        });*/
+        
+        $(document).ready(function () {
+            var color=['red','white','blue'];
+            
+            $('h1').css({color:function(index){
+                return color[index];
+            },});
+        });
+    </script>
+    
+    <style>
+        .first{ color: red; }
+        .second{ color: pink; }
+        .third{ color: orange; }
+    </style>
+</head>
+<body>
+    <!--<img src="img/xcom07.jpg" />
+    <img src="img/xcom07.jpg" />
+    <img src="img/xcom07.jpg" />-->
+    
+    <!--<h1 data-index="0">1</h1>
+    <h1 data-index="1">2</h1>
+    <h1 data-index="2">3</h1>-->
+    
+    <!--<h1 class="first">1</h1>
+    <h1 class="second">2</h1>
+    <h1 class="third">3</h1>-->
+    
+    <h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+          var c = document.getElementById('clock');            
+            
+            setInterval(function(){
+                c.innerHTML=new Date().toString();
+            });
+        };   
+    </script>
+    <style>
+        .t1{
+            border: 1px solid blue;
+            width: 100px; height: 160px;
+            margin: auto;
+            border-radius: 20px;
+        }
+        .t1:hover{
+            background-color: blue;
+            color: white;
+        }
+        .t2{
+            border: 1px solid burlywood;
+            width: 200px; height: 100px;
+            margin: auto;
+            
+        }
+        .t2:hover{
+            background-color: burlywood;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <p id="clock"></p>
+    </div>
+    <br>
+    <div class="t2">
+        <h4 id="c1">test</h4>
+    </div>
+</body>
+</html>

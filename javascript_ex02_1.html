@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var cnt = new Date("July 7, 2017 18:00:00").getTime();
+        
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var d = cnt-now;
+            
+            var D = Math.floor(d/(1000*60*60*24));
+            var H = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+            var M = Math.floor((d%(1000*60*60))/(1000*60));
+            var S = Math.floor((d%(1000*60))/1000);
+            
+            document.getElementById('c1').innerHTML = D+'D '+H+'H '+M+'M '+S+'S ';
+            
+            if(d<0){
+                clearInterval(x);
+                document.getElementById('c1').innerHTML='end';
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id='c1'></h1>
+</body>
+</html>

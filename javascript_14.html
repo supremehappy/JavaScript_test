@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        /*예외처리*/
+        /*function registerEventListener(node,event,listener){
+            if(node.addEventListener){
+                //파폭, 크롬, 사파리,오페라
+               node.addEventListener(event,listener,false);
+            }else if(node.attachEvent){
+                //익스
+               node.attachEvent('on'+event,listener);
+            }
+        }*/
+        
+        /*function whenClick(e){
+            var event = window.event || e;
+            var will = '';
+            will +='clientX : ' + event.clientX+'\n';
+            will +='clientY : ' + event.clientY+'\n';
+            alert(will);
+        }*/
+        
+        /*try{
+            will.byeBye();
+            alert('a');
+        }catch(exception){
+            alert('b');
+        }*/
+        
+        /*try{
+            will.byeBye();
+            alert('a');
+        }catch(exception){
+            alert('b');
+        }finally{
+            alert('c');
+        }*/
+        
+        /*function registerEventListener(node,event,listener){
+            if(node.addEventListener){
+                //파폭, 크롬, 사파리,오페라
+               node.addEventListener(event,listener,false);
+            }else if(node.attachEvent){
+                //익스
+               node.attachEvent('on'+event,listener);
+            }
+        }
+        
+        window.onload = function(){
+          var h = document.getElementById('header');  
+          
+          registerEventListener(h,'click',function(){
+              alert('click');
+          });
+        };*/
+        
+        /*try{
+            var array=new Array(9999999999999999);
+        }catch(exception){
+            var output='';
+            for(var i in exception){
+                output+= i+' : '+exception[i]+'\n';
+            }
+            alert(output);
+        }*/
+        
+        //에러
+        /*try{
+            error+-error+++;
+        }catch(exception){
+            alert('e');
+        }*/
+        
+        //throw 'CUSTOM EXCEPTION OCCUR';
+        
+        function div(alpha, beta){
+            if(beta==0){
+                throw 'DvideByZeroException';
+            }else{
+                return alpha/beta;
+            }
+        }
+        
+        try{
+            div(10,0);
+        }catch(exception){
+            alert('a');
+        }
+    </script>
+</head>
+<body>
+    <!--<h1 onclick="whenClick">c</h1>-->
+    <!--<h1 id="header">test</h1>-->
+</body>
+</html>
