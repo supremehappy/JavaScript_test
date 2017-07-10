@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <style>
+        /*.reverse{
+            background: black;
+            color: white;
+        }*/
+        
+        /**{margin: 0px;padding: 0px;}
+        
+        div{
+            margin: 5px; padding: 3px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }*/
+        
+        /**{
+            margin: 5px; padding: 5px;
+            border: 3px solid black;
+        }*/
+        
+        /*.outter{
+            width: 200px;
+            height: 200px;
+            background: orange;
+            padding: 50px;
+            margin: 10px;
+        }
+        
+        .inner{
+            width: 100%;
+            height: 100%;
+            background: red;
+        }*/
+    </style>
+</head>
+    <script>
+        //이벤트 연결 기본
+        /*$(document).ready(function(){
+            $('h1').on('click',function(){
+               $(this).html(function(index,html){
+                  return html+'+' ;
+               });
+            });
+        });*/
+        
+        /*$(document).ready(function(){
+            $('h1').on('click',function(){
+               $(this).html(function(index,html){
+                  return html+'+' ;
+               });
+            });
+            
+            $('h1').on({
+                mouseenter:function(){
+                $(this).addClass('reverse');},
+                mouseleave:function(){
+                $(this).addClass('reverse');}        
+            });
+        });*/
+        
+        /*$(document).ready(function(){
+            $('h1').hover(function(){
+                $(this).addClass('reverse');},
+                function(){
+                $(this).removeClass('reverse');
+            });
+        });*/
+        
+        //off
+        /*$(document).ready(function(){
+            $('h1').click(function(){
+                $(this).html('click');
+                alert('ok');
+                
+                $(this).off();
+            });
+        });*/
+        
+        /*$(document).ready(function(){
+            $('div').click(function(){
+               var h = $('h1', this).text();
+                var p = $('p', this).text();
+                
+                alert(h + '\n' + p);
+            });
+        });*/
+        
+        //canvas
+        /*$(document).ready(function(){
+            var c = document.getElementById('can');
+            var ct = c.getContext('2d');
+            
+            $(c).on({
+                mousedown: function(event){
+                    var pos = $(this).offset();
+                    var x = event.pageX - pos.left;
+                    var y = event.pageY - pos.top;
+                    
+                    ct.beginPath();
+                    ct.moveTo(x,y);
+                },
+                mouseup: function(event){
+                    var pos = $(this).offset();
+                    var x = event.pageX - pos.left;
+                    var y = event.pageY - pos.top;
+                    
+                    ct.lineTo(x,y);
+                    ct.stroke();
+                }
+            });
+        });*/
+        
+        //trigger
+        /*$(document).ready(function(){
+           $('h1') .click(function(){
+               $(this).html(function(index,html){
+                    return html+'*';    
+               });
+           });
+            
+            setInterval(function(){
+                $('h1') .last().trigger('click');
+            },1000);
+        });*/
+        
+        //기본 이벤트와 이벤트 전달
+        /*$(document).ready(function(){
+           $('a') .click(function(event){
+               $(this).css('background-color','blue');
+               event.preventDefault();
+           });
+            
+            $('h1').click(function(){
+                $(this).css('background-color','red');
+            });
+        });*/
+        
+        //전달 막기
+        /*$(document).ready(function(){
+           $('a') .click(function(event){
+               $(this).css('background-color','blue');
+               event.stopPropagation();
+               event.preventDefault();
+           });
+            
+            $('h1').click(function(){
+                $(this).css('background-color','red');
+            });
+        });*/
+        
+        //전달 막기
+        /*$(document).ready(function(){
+           $('a') .click(function(event){
+               $(this).css('background-color','blue');
+               return false;
+           });
+            
+            $('h1').click(function(){
+                $(this).css('background-color','red');
+            });
+        });*/
+        
+        //연결 범위 한정
+        //기본 이벤트 연결 /on()
+        /*$(document).ready(function(){
+           $('h1').on('click',function(){
+               var length=$('h1').length;
+               var targerHTML=$(this).html();
+              
+               $('#wrap').append('<h1>'+length+' - '+targerHTML+'</h1>');
+           });
+        });*/
+        
+        //delegate 방식 /on()
+        /*$(document).ready(function(){
+           $('#wrap').on('click','h1',function(){
+               var length=$('h1').length;
+               var targerHTML=$(this).html();
+              
+               $('#wrap').append('<h1>'+length+' - '+targerHTML+'</h1>');
+           });
+        });*/
+        
+        //delegate 방식 /on()의 이벤트 리스너 삭제
+        /*$(document).ready(function(){
+           $('#wrap').on('click','h1',function(){
+               var length=$('h1').length;
+               var targerHTML=$(this).html();
+              
+               $('#wrap').append('<h1>'+length+' - '+targerHTML+'</h1>');
+               
+               $('#wrap').off('click','h1');
+           });
+        });*/
+        
+        // 마우스 이벤트
+        /*$(document).ready(function(){
+           $('.outter').mouseover(function(){
+              $('body').append('<h1>over</h1>');
+           }).mouseenter(function(){
+              $('body').append('<h1>enter</h1>')
+           });
+        });*/
+        
+        //키보드 이벤트
+        /*$(document).ready(function(event){
+            $('textarea').keyup(function(){
+               var input = $(this) .val().length;
+                var remain = 150-input;
+                
+                $('h1').html(remain);
+            });
+        });*/
+        
+        /*$(document).ready(function(event){
+            $('textarea').keyup(function(){
+               var input = $(this) .val().length;
+                var remain = 150-input;
+                
+                $('h1').html(remain);
+                
+                if(remain>=0){
+                   $('h1').css('color','black');
+                }else{
+                       $('h1').css('color','red');
+                }
+            });
+        });*/
+        
+        //윈도 이벤트
+        /*$(document).ready(function(){
+           $(window).scroll(function(){
+              var scrollH =$(window).scrollTop()+$(window).height();
+               var docu = $(document).height();
+               
+               if(scrollH==docu){
+                   for(var i=0; i<10; i++){
+                       $('<h1>test</h1>').appendTo('body');
+                   }
+               }
+           });
+        });
+        
+        $(document).ready(function(){
+           for(var i = 0 ; i<20;i++) {
+               $('<h1>test</h1>').appendTo('body');
+               }
+        });*/
+        
+        //입력 양식 이벤트
+        /*$(document).ready(function(){
+           $('#form') .submit(function(){
+               
+               var name=$('#name').val();
+               var password=$('#password').val();
+               
+               alert(name+' : '+password);
+               event.preventDefault();
+           });
+        });*/
+    </script>
+    
+<body>
+    <!--<h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>-->
+    
+    <!--<div>
+        <h1>h1</h1>
+        <p>p1</p>
+    </div>
+    <div>
+        <h1>h2</h1>
+        <p>p2</p>
+    </div>
+    <div>
+        <h1>h2</h1>
+        <p>p2</p>
+    </div>-->
+    
+    <!--<canvas id="can" width="700" height="400" style="border:3px solid black"></canvas>-->
+    
+    <!--<h1>start : </h1>
+    <h1>start : </h1>-->
+    
+    <!--<h1>
+        <a href="http://www.naver.com">naver</a>
+    </h1>-->
+    
+    <!--<div id="wrap">
+        <h1>h1</h1>
+    </div>-->
+    
+    <!--<div class="outter">
+        <div class="inner"></div>
+    </div>-->
+    
+    <!--<div>
+        <p>test</p>
+        <h1>150</h1>
+        <textarea cols="70" rows="5"></textarea>
+    </div>-->
+    
+    <!--<form id="form">
+        <table>
+            <tr>
+                <td>name : </td>
+                <td><input type="text" name="name" id="name"/></td>
+            </tr>
+            <tr>
+                <td>pw : </td>
+                <td><input type="password" name="password" id="password"/></td>
+            </tr>
+        </table>
+        <input type="submit" value="submit"/>
+    </form>-->
+</body>
+</html>

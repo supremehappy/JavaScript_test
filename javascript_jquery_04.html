@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script>
+        //문서 객체의 내부 검사
+        //html()
+        /*$(document).ready(function(){
+            var html = $('h1').html();
+
+            alert(html);
+        });*/
+        
+        //text()
+        /*$(document).ready(function(){
+            var html = $('h1').text();
+
+            alert(html);
+        });*/
+        
+        //html() setter 1
+        /*$(document).ready(function(){
+            $('div').html('<h1>$().html() Method</h1>');
+        });*/
+        
+        //text() setter 1
+        /*$(document).ready(function(){
+            $('div').text('<h1>$().html() Method</h1>');
+        });*/
+        
+        //html() setter 2
+        /*$(document).ready(function(){
+            $('div').html(function(index){
+               return '<h1>header-'+index+'</h1>' ;
+            });
+        });*/
+        
+        //text() setter 2
+        /*$(document).ready(function(){
+            $('div').text(function(index){
+               return '<h1>header-'+index+'</h1>' ;
+            });
+        });*/
+        
+        /*$(document).ready(function(){
+            $('h1').html(function(index, html){
+               return '*'+html+'*';
+            });
+        });*/
+        
+        //first().remove()
+        /*$(document).ready(function(){
+            $('h1').first().remove();
+        });*/
+        
+        //empty()
+        /*$(document).ready(function(){
+            $('div').empty();
+        });*/
+        
+        //문서 객체 삽입
+        //appendTo()
+        /*$(document).ready(function(){
+            $('<h1></h1>').html('hello').appendTo('body');
+        });*/
+        
+        /*$(document).ready(function(){
+            $('<img />').attr('src','img/xcom07.jpg').appendTo('body');
+        });*/
+        
+        /*$(document).ready(function(){
+            $('<img />',{src:'img/xcom07.jpg',
+                           width:350, height:250
+                        }).appendTo('body');
+        });*/
+        
+        /*$(document).ready(function(){
+            var h1 = '<h1>h1</h1>';
+            var h2 = '<h2>h2</h2>';
+            
+            $('body').append(h1,h2,h1,h2);
+        });*/
+        
+        /*$(document).ready(function(){
+            var content=[
+                {name :'a', region:'b'},
+                {name :'c', region:'d'},
+                {name :'e', region:'f'}
+            ];
+            
+            $('div').append(function(index){
+                var item= content[index];
+                var output='';
+                
+                output+='<h1>'+item.name+'</h1>';
+                output+='<h2>'+item.region+'</h2>';
+                
+                return output;
+            });
+        });*/
+        
+        //문서 객체 이동
+        /*$(document).ready(function(){
+           $('img') .css('width',250);
+            
+            setInterval(function(){
+               $('img').first().appendTo('body') ;
+            },2000);
+        });*/
+        
+        $(document).ready(function(){
+           $('div').append($('h1').clone());
+        });
+    </script>
+</head>
+<body>
+    <!--<h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>   --> 
+    
+    <!--<div></div>
+    <div></div>
+    <div></div>-->
+    
+    <!--<h1>h1</h1>
+    <h1>h2</h1>
+    <h1>h3</h1>-->
+    
+    <!--<div>
+        <h1>1</h1>
+        <h1>2</h1>
+    </div>-->
+    
+    <!--<div></div>
+    <div></div>
+    <div></div>-->
+    
+    <!--<img src="img/xcom00.jpg" />
+    <img src="img/xcom01.jpg" />
+    <img src="img/xcom02.jpg" />
+    <img src="img/xcom03.jpg" />
+    <img src="img/xcom04.jpg" />-->
+    
+    <h1>header</h1>
+    <hr/><div></div><hr/>
+</body>
+</html>
