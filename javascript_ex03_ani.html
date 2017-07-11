@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+        div{
+            width: 100px; height: 100px;
+            color: azure; background-color: aquamarine;
+            text-align: center; 
+            border-radius: 10px;
+            position: relative;
+        }   
+    </style>
+    
+    <script>
+        $(document).ready(function(){
+            $('.t1').hover(function(){
+               $(this).animate({
+                  opacity:0
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   opacity:1
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t2').hover(function(){
+               $(this).animate({
+                  height:100
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   height:0
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t3').hover(function(){
+               $(this).animate({
+                  top:-100
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   top:0
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t4').hover(function(){
+               $(this).animate({
+                  width:100
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   width:0
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t5').hover(function(){
+               $(this).animate({
+                  left:100
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   left:0
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t6').hover(function(){
+               $(this).animate({
+                  margin:50
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   magin:1
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t7').hover(function(){
+               $(this).animate({
+                  right:100
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   right:0
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t8').hover(function(){
+               $(this).animate({
+                  padding:50
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   padding:0
+                },'slow');
+            });
+        });
+        
+        $(document).ready(function(){
+            $('.t9').hover(function(){
+               $(this).animate({
+                  bottom:-100
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   bottom:0
+                },'slow');
+            });
+        });
+    </script>
+</head>
+<body>
+    <br>
+    <div class="t1">1</div>
+    <br>
+    <div class="t2">2</div>
+    <br>
+    <div class="t3">3</div>
+    <br>
+    <div class="t4">4</div>
+    <br>
+    <div class="t5">5</div>
+    <br>
+    <div class="t6">6</div>
+    <br>
+    <div class="t7">7</div>
+    <br>
+    <div class="t8">8</div>
+    <br>
+    <div class="t9">9</div>
+    
+    
+</body>
+</html>

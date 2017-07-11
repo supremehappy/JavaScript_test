@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="js/jquery.innerfade.js"></script>
+    
+    <style>
+        * { margin: 0; padding: 0;}
+        ul { list-style: none;}
+        img {width: 500px; height: 350px;}
+    </style>
+    
+    <script>
+        //innerfade 플러그인
+        $(document).ready(function(){
+            $('#inner-fade').innerfade({
+               animationtype:'slide' ,
+                speed:750,
+                timeout:2000,
+                type:'random',
+                containerheight:'350px'
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="inner-fade">
+        <li><img src="img/xcom00.jpg" /></li>
+        <li><img src="img/xcom01.jpg" /></li>
+        <li><img src="img/xcom02.jpg" /></li>
+        <li><img src="img/xcom03.jpg" /></li>
+    </ul>
+</body>
+</html>

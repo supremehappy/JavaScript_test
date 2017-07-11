@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    
+    <style>
+        /*상대적 애니메이션*/
+        /*div{
+            width: 50px; height: 50px;
+            background-color: orange;
+            position: relative;
+        }*/    
+        
+        /*animate*/
+        /*div {
+            width: 50px; height: 50px;
+            background-color: orange;
+        }*/
+        
+        /*애니메이션 큐*/
+        /*div{
+            width: 50px; height: 50px;
+            background-color: orange;
+            position: relative;
+        }*/
+        
+        /*애니메이션 정지*/
+        /*div{
+            width: 50px; height: 50px;
+            background-color: orange;
+            position: relative;
+        }*/
+        
+        /*애니메이션 지연*/
+        /*div{
+            width: 50px; height: 50px;
+            background-color: orange;
+            position: relative;
+        }*/
+    </style>    
+    
+    <script>
+        // 효과
+        // 기본 시각효과
+        //toggle()
+        /*$(document).ready(function(){
+            $('button').click(function(){
+               $('.page').toggle('slow') ;
+            });
+        });*/
+        
+        //fadetoggle()
+        /*$(document).ready(function(){
+            $('button').click(function(){
+               $('.page').fadeToggle('slow') ;
+            });
+        });*/
+        
+        //slideToggle()
+        /*$(document).ready(function(){
+            $('button').click(function(){
+               $('.page').slideToggle('slow') ;
+            });
+        });*/
+        
+        //사용자 정의효과
+        //상대적 애니메이션
+        /*$(document).ready(function(){
+            $('div').hover(function(){
+               $(this).animate({
+                   left: 500
+               }, 'slow'); 
+            }, function(){
+                $(this).animate({
+                   left:0 
+                },'slow');
+            });
+        });*/
+        
+        //animate()
+        /*$(document).ready(function(){
+           $('div').click(function(){
+                var width = $(this).css('width');
+               var height=$(this).css('height');
+               
+               $(this).animate({
+                  width: parseInt(width) +50,
+                   height: parseInt(height)+50
+               },'slow');
+           });
+        });*/
+        
+        //애니메이션 큐
+        /*$(document).ready(function(){
+           $('div').animate({left:'+=60'},2000);
+            $('div').animate({width:'+=60'},2000);
+            $('div').animate({height:'+=60'},2000);
+            
+            setTimeout(function(){
+               $('div').clearQueue();
+                
+                $('div').hide();
+            },6000);
+        });*/
+        
+        //애니메이션 정지
+        /*$(document).ready(function(){
+            $('button').click(function () {
+                var html = $(this).html();
+                var evalText = "$('div')." + html;
+                
+                eval(evalText);
+            });
+            
+            setInterval(function () {
+               $('div').animate({
+                 left: '500' 
+               }, 1000).animate({
+                   left:'0'
+               },1000);
+            },2000);
+        });*/
+        
+        //애니메이션 지연
+        /*$(document).ready(function(){
+           $('div').each(function(index){
+               $(this).delay(index*1000).animate({
+                   left:500
+               },'slow');
+           });
+        });*/
+    </script>
+</head>
+<body>
+   <!--기본 시각효과-->
+    <!--<button>show</button>
+    <div class="page">
+        <h1>test</h1>
+        <p>ex</p>
+    </div>-->
+    
+    <!--상대적 애니메이션-->
+    <!--<div></div><div></div>
+    <div></div><div></div>
+    <div></div><div></div>-->
+    
+    <!--animate-->
+    <!--<div></div>-->
+    
+    <!--애니메이션 큐-->
+    <!--<div></div>-->
+    
+    <!--애니메이션 정지-->
+    <!--<button>stop()</button>
+    <button>stop(true)</button>
+    <button>stop(false, true)</button>
+    <button>stop(true, true)</button>
+    <div></div>-->
+    
+    <!--애니메이션 지연-->
+    <!--<div></div><div></div>
+    <div></div><div></div>
+    <div></div><div></div>-->
+</body>
+</html>
